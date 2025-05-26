@@ -1,0 +1,35 @@
+{
+  "name": "@toikit/redis",
+  "version": "1.0.0",
+  "description": "Toikit Redis use for Toikit Framework",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run test",
+    "build": "rm -rf ./dist && npx tsc && npx tsc-alias"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toikit/toikit-redis.git"
+  },
+  "keywords": [
+    "toikit",
+    "server",
+    "nodejs",
+    "redis"
+  ],
+  "author": "Toikit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toikit/toikit-redis/issues"
+  },
+  "homepage": "https://github.com/toikit/toikit-redis#readme",
+  "dependencies": {
+    "@toikit/toikit": "^1.1.1",
+    "@types/express": "^5.0.2",
+    "redis": "^5.1.0",
+    "typescript": "^5.8.3"
+  }
+}
