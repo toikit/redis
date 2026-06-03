@@ -1,6 +1,6 @@
 // Create a Redis client
 import { createClient } from 'redis';
-import { getConfig } from '@toikit/toikit';
+import { getConfig } from '@toikit/core';
 
 let redisConnection: any = {};
 

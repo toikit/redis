@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getRedis = void 0;
 const redis_1 = require("./redis");
-const toikit_1 = require("@toikit/toikit");
+const core_1 = require("@toikit/core");
 let redisConnection = {};
 const getRedis = (name = 'default') => {
     if (redisConnection[name])
         return redisConnection[name];
-    let redisconfig = (0, toikit_1.getConfig)('redis');
+    let redisconfig = (0, core_1.getConfig)('redis');
     let redis = (0, redis_1.createClient)(redisconfig[name]);
     redis.on('error', (err) => {
         console.error('Redis error:', err);
