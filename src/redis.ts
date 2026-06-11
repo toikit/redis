@@ -1,13 +1,13 @@
 // Create a Redis client
 import { createClient } from 'redis';
-import { getConfig } from '@toikit/core';
+import { config } from '@toikit/core';
 
 let redisConnection: any = {};
 
-export const getRedis = (name:string = 'default') => {
+export const redis = (name:string = 'default') => {
   if (redisConnection[name]) return redisConnection[name];
 
-  let redisconfig = getConfig('redis');
+  let redisconfig = config('redis');
   let redis = createClient(redisconfig[name]);
 
   redis.on('error', (err) => {
